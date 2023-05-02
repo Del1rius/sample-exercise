@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Exercise</title>
+    <style>
+        body{
+            background-color: tan;
+            color: black;
+        }
+        @media screen and (max-width: 992px){
+            body {
+                background-color: blue;
+                color: white;
+            }
+        }
+        @media screen and (max-width: 600px){
+            body {
+                background-color: olive;
+                color: white;
+            }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        tr:nth-of-type(odd) {
+            background: #eee;
+        }
+        th {
+            background: #333;
+            color: white;
+            font-weight: bold;
+        }
+        td,th {
+            padding: 6px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+
+        @media
+        only screen and (max-width: 760px),
+        (min-device-width: 768px) and (max-device-width: 1024px){
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+        }
+
+        thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+
+        tr {
+            border: 1px solid #ccc;
+        }
+
+        td {
+            border: none;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 50%;
+        }
+
+        td:before {
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+        }
+
+        td:nth-of-type(1):before{content: "First Name";}
+        td:nth-of-type(2):before{content: "Last Name";}
+        td:nth-of-type(3):before{content: "Job Title";}
+        td:nth-of-type(4):before{content: "Favorite Color";}
+        td:nth-of-type(5):before{content: "Wars of Trek?";}
+        td:nth-of-type(6):before{content: "Secret Alias";}
+        td:nth-of-type(7):before{content: "Date of Birth";}
+        td:nth-of-type(8):before{content: "Dream Vacation City";}
+        td:nth-of-type(9):before{content: "GPA";}
+        td:nth-of-type(10):before{content: "Arbitrary Data";}
+    </style>
+</head>
+<body>
+    <h1>Check output by changing sizes of screen</h1>
+    <p>Test the application of media queries by changing the sizes of the screens</p>
+    <table border="2">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Job Title</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Odwa</td>
+                <td>Mpofu</td>
+                <td>Manager</td>
+            </tr>
+            <tr>
+                <td>Victor</td>
+                <td>Senzele</td>
+                <td>Head Philosopher</td>
+            </tr>
+            <tr>
+                <td>Amber</td>
+                <td>Petersen</td>
+                <td>Head Programmer</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
